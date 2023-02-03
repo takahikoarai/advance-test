@@ -60,6 +60,7 @@
   <input type="submit" value="送信">
 </form>
 <form action="/edit" method="POST">
+  @csrf
   <a href="index.blade.php">修正する</a>
 </form>
 @endsection
