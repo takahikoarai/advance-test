@@ -27,9 +27,9 @@ class IndexRequest extends FormRequest
         return [
             'fullname' => 'required',
             'email' => 'required|email',
-            'postcode' => ['requied', new PostCodeRule()],
+            'postcode' => ['required', new PostCodeRule()],
             'address' => 'required',
-            'opinion' => 'required|string|max120'
+            'opinion' => 'required|string|max:120'
         ];
     }
 

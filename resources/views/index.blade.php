@@ -23,8 +23,8 @@
     <tr>
       <th>お名前 <span class="red">※</span></th>
       <td>
-        <input type="text" name="fullname" class="first-name">
         <input type="text" name="fullname" class="last-name">
+        <input type="text" name="fullname" class="first-name">
       </td>
     </tr>
     <tr>

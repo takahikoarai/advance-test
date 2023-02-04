@@ -10,7 +10,7 @@
     <tr>
       <th>お名前</th>
       <td>
-        <input type="hidden" name="fullname" value="{{ $inputs->fullname }}">
+        <input type="hidden" name="fullname" value="{{ $inputs['fullname'] }}">
         <p>{{ $inputs->fullname }}</p>
       </td>
     </tr>
