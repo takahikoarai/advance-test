@@ -25,7 +25,8 @@ class IndexRequest extends FormRequest
     public function rules()
     {
         return [
-            'fullname' => 'required',
+            'lastname' => 'required',
+            'firstname' => 'required',
             'email' => 'required|email',
             'postcode' => ['required', new PostCodeRule()],
             'address' => 'required',

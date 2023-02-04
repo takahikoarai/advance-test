@@ -11,8 +11,8 @@
       <tr>
         <th>お名前</th>
         <td>
-          <input type="hidden" name="fullname" value="{{ $inputs['fullname'] }}">
-          <p>{{ $inputs['fullname'] }}</p>
+          <input type="hidden" name="fullname" value="{{ $inputs['lastname'] }}{{ $inputs['firstname'] }}">
+          <p>{{ $inputs['lastname'] }}{{ $inputs['firstname'] }}</p>
         </td>
       </tr>
       <tr>
@@ -20,7 +20,11 @@
         <td>
           <!-- 1で男性、2で女性と表示させるにはどうするか -->
           <input type="hidden" name="gender" value="{{ $inputs['gender'] }}">
-          <p>{{ $inputs['gender'] }}</p>
+          @if($inputs['gender'] == 1)
+          <p>男性</p>
+          @else
+          <p>女性</p>
+          @endif
         </td>
       </tr>
       <tr>
