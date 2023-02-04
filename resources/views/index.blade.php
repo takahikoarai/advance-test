@@ -1,4 +1,4 @@
-@extends('layouts.defaut')
+@extends('layouts.default')
 <style>
   .red{
     color:red;

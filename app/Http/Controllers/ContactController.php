@@ -17,7 +17,6 @@ class ContactController extends Controller
     {
         $inputs = $request->all();
         $request->session()->put('inputs', $inputs);
-        var_dump($inputs);
         return view('confirm', ['inputs' => $inputs]);
     }
 
