@@ -20,14 +20,18 @@ class ContactController extends Controller
         return view('confirm', ['inputs' => $inputs]);
     }
 
-    public function edit()
+    // 「修正するというリンクを押すとお問い合わせページに戻してください。 その際に、入力データが保たれるようにしてください」
+    // を実装したいけどできないので後回し
+    public function edit(IndexRequest $request)
     {
-
     }
 
     public function create(IndexRequest $request)
     {
-
+        $inputs = $request->all();
+        Contact::create($inputs);
+        $request->session()->forget('inputs');
+        return view('thanks');
     }
 
     public function getAll()

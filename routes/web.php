@@ -19,3 +19,9 @@ Route::post('/', [ContactController::class, 'index']);
 
 Route::get('/confirm', [ContactController::class, 'confirm']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
+
+Route::get('/edit', [ContactController::class, 'edit']);
+Route::post('/edit', [ContactController::class, 'edit']);
+
+Route::get('/create', [ContactController::class, 'create']);
+Route::post('/create', [ContactController::class, 'create']);

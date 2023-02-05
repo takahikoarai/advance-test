@@ -67,9 +67,9 @@
   </form>
 </div>
 <div class="form-edit">
-  <form action="/edit" method="POST">
+  <form action="/" method="POST">
     @csrf
-    <a href="index.blade.php">修正する</a>
+    <input type="submit" value="修正する">
   </form>
 </div>
 @endsection
