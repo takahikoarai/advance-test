@@ -21,12 +21,12 @@ class ContactController extends Controller
     }
 
     // 「修正するというリンクを押すとお問い合わせページに戻してください。 その際に、入力データが保たれるようにしてください」
-    // を実装したいけどできないので後回し
+    // を実装したいけど悩み中
     public function edit(IndexRequest $request)
     {
     }
 
-    public function create(IndexRequest $request)
+    public function create(Request $request)
     {
         $inputs = $request->all();
         Contact::create($inputs);
