@@ -25,3 +25,6 @@ Route::post('/edit', [ContactController::class, 'edit']);
 
 Route::get('/create', [ContactController::class, 'create']);
 Route::post('/create', [ContactController::class, 'create']);
+
+Route::get('/manegement', [ContactController::class, 'getAll']);
+Route::post('/manegement', [ContactController::class, 'getAll']);

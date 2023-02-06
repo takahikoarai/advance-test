@@ -64,12 +64,7 @@
       </tr>
     </table>
     <input type="submit" value="送信">
-  </form>
-</div>
-<div class="form-edit">
-  <form action="/" method="POST">
-    @csrf
-    <input type="submit" value="修正する">
+    <a href="{{ url('/') }}" name="back" value="back">修正する</a>
   </form>
 </div>
 @endsection

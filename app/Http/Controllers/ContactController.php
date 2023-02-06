@@ -20,23 +20,24 @@ class ContactController extends Controller
         return view('confirm', ['inputs' => $inputs]);
     }
 
-    // 「修正するというリンクを押すとお問い合わせページに戻してください。 その際に、入力データが保たれるようにしてください」
-    // を実装したいけど悩み中
-    public function edit(IndexRequest $request)
-    {
-    }
 
     public function create(Request $request)
     {
-        $inputs = $request->all();
-        Contact::create($inputs);
-        $request->session()->forget('inputs');
-        return view('thanks');
+        // 「修正するというリンクを押すとお問い合わせページに戻してください。 その際に、入力データが保たれるようにしてください」を実装したいけど悩み中
+        if($request->input('back') == 'back'){
+            return redirect('/')->withInput();
+        } else {
+            $inputs = $request->all();
+            Contact::create($inputs);
+            $request->session()->forget('inputs');
+            return view('thanks');
+        }
     }
 
     public function getAll()
     {
-
+        $contacts = Contact::all();
+        return view('manegement', ['contacts' => $contacts]);
     }
 
     public function delete()
