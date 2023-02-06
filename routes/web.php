@@ -28,3 +28,6 @@ Route::post('/create', [ContactController::class, 'create']);
 
 Route::get('/manegement', [ContactController::class, 'getAll']);
 Route::post('/manegement', [ContactController::class, 'getAll']);
+
+Route::get('/delete', [ContactController::class, 'delete']);
+Route::post('/delete', [ContactController::class, 'delete']);

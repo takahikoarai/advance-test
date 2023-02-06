@@ -32,6 +32,7 @@
       <td>{{ $contact->opinion }}</td>
       <td>
         <form action="/delete" method="POST">
+          @csrf
           <input type="hidden" name="id" value="{{ $contact->id }}">
           <input type="submit" value="削除">
         </form>

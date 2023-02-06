@@ -40,9 +40,10 @@ class ContactController extends Controller
         return view('manegement', ['contacts' => $contacts]);
     }
 
-    public function delete()
+    public function delete(Request $request)
     {
-
+        Contact::find($request->id)->delete();
+        return redirect('/manegement');
     }
 
 }
